@@ -73,11 +73,14 @@ Further reconnaissance exposed a directory listing which exposed Staff name, sal
 I copied this information to chatGPT to generate a readable table and also generate PDF copies of these tables.
 The name Jameel Malik is also in the staff table. Recall that the same name (J. Malik) moved the backup and left the note inside the file.
 
+
 # Risk Rating
 | Vulnerability | Location | Risk
 | :--- | :--- | :---
-| Weak PDF passwords crackable with a wordlist | ´patient_laboratory_report_1.pdf´ | High |
-| Confidential Staff salaries and shareholders data exposed | ´old/mediroza_db_backup_2019.sql´ | Critical
+| Weak PDF passwords crackable with a wordlist | `patient_laboratory_report_1.pdf` | High |
+| Confidential Staff salaries and shareholders data exposed | `old/mediroza_db_backup_2019.sql` | Critical |
+| Sensitive metadata left in patient PDF files | `patient_laboratory_report_3.pdf` | Medium |
+| Encrypted PDFs accessible after login bypass | `patient/laboratory/reports` | 
  
 
 

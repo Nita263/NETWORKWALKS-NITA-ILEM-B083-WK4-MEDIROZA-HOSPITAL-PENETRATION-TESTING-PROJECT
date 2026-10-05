@@ -80,16 +80,17 @@ I copied this information to chatGPT to generate a readable table and also gener
 The name Jameel Malik is also in the staff table. Recall that the same name (J. Malik) moved the backup and left the note inside the file.
 
 # Risk Rating
+🔴 Critical 🟠 High 🔵 Medium
 
 | Vulnerability | Location | Risk
 | :--- | :--- | :---
-| Weak PDF passwords crackable with a wordlist | `patient_laboratory_report_1.pdf` | High |
-| Confidential Staff salaries and shareholders data exposed | `old/mediroza_db_backup_2019.sql` | Critical |
-| Sensitive metadata left in patient PDF files | `patient_laboratory_report_3.pdf` | Medium |
-| Encrypted PDFs accessible after login bypass | `patient/laboratory/reports` | High |
-| Username enumeration on login page | `patient/login.php` | Medium |
-| SQL injection login bypass | `patient/login.php` | Critical |
-| Forgotten backup folder with directory listing enabled | `old/` |
+| Weak PDF passwords crackable with a wordlist | `patient_laboratory_report_1.pdf` | 🟠 High |
+| Confidential Staff salaries and shareholders data exposed | `old/mediroza_db_backup_2019.sql` | 🔴 Critical |
+| Sensitive metadata left in patient PDF files | `patient_laboratory_report_3.pdf` | 🔵 Medium |
+| Encrypted PDFs accessible after login bypass | `patient/laboratory/reports` | 🟠 High |
+| Username enumeration on login page | `patient/login.php` | 🔵 Medium |
+| SQL injection login bypass | `patient/login.php` | 🔴 Critical |
+| Forgotten backup folder with directory listing enabled | `old/` | 🔴 Critical |
 
 # Recommendations and Remediation 
 
@@ -103,5 +104,3 @@ Never reveal which one failed.
 
 
  
-# Recommendations and Remediation
-Actionable steps the client should take to fix each identified

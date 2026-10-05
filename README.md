@@ -56,6 +56,7 @@ I was able to crack all three locked PDFs, and their passwords extracted to gain
 <img width="1032" height="856" alt="Patient Laboratory report 3" src="https://github.com/user-attachments/assets/78373915-d439-4e18-a648-5e42fd9cff37" />
 
 
+
 Deep Reconnaissance
 
 I read the metadata using exiftool - a command line tool that reads and displays all metadata fields from any file type including PDFs (Metadata is hidden information stored inside a file, such as who created it, when, and with what software)

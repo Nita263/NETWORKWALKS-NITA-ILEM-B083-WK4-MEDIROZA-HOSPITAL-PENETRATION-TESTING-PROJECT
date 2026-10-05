@@ -96,11 +96,19 @@ The name Jameel Malik is also in the staff table. Recall that the same name (J. 
 
 1 SQL injection: Use prepared statements. Never build SQL queries using raw
 user input.
+
 2 Username enumeration: Show the same error message for a wrong username and a wrong password.
 Never reveal which one failed.
+
 3 PDF metadata: Make sure to strip all metadata from patient files before distributing. Use exiftool -all= filename.pdf to clean files.
+
 4 Use unique/strong passwords that are at least 12-16 characters long.
+
 5 Directory listing and backup exposure: Disable directory listing on all folders. Remove or relocate old backup files and never store database backups in a public web folder.
 
 
  
+Author: Nita Ilem
+Cybersecurity student 
+Networkwalks 
+LinkedIn: https://www.linkedin.com/in/nita-ilem-

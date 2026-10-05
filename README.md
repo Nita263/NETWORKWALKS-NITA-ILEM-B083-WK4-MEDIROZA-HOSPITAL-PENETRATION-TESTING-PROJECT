@@ -1,4 +1,4 @@
-<img width="983" height="858" alt="Patient Laboratory report 1" src="https://github.com/user-attachments/assets/3579787e-1b35-4265-97cd-eac2fcf00ee3" /># Penetration Testing project at Mediroza Hospital
+# Penetration Testing project at Mediroza Hospital
 # Executive Summary
 
 Penetration testing was carried out on Mediroza hospital to identify vulnerabilities, exploit them to demonstrate real impact, and document all findings.
@@ -57,6 +57,7 @@ I was able to crack all three locked PDFs, and their passwords extracted to gain
 
 <img width="1032" height="856" alt="Patient Laboratory report 3" src="https://github.com/user-attachments/assets/78373915-d439-4e18-a648-5e42fd9cff37" />
 
+
 Deep Reconnaissance
 
 I read the metadata using exiftool - a command line tool that reads and displays all metadata fields from any file type including PDFs (Metadata is hidden information stored inside a file, such as who created it, when, and with what software)
@@ -64,6 +65,7 @@ I read the metadata using exiftool - a command line tool that reads and displays
 I ran the exiftool command (exiftool patient_laboratory_report_1.pdf) to get metadata about the patients report. 
 
 <img width="939" height="1018" alt="Exiftool" src="https://github.com/user-attachments/assets/cb15430b-41c1-4a30-a340-612d8f9bb851" />
+
 
 To get more information, I had to use the password option (exiftool -password your_password) to unlock other parts of the data.  I was able to uncover the name of the Author - J. Malik and other details and backup data that has been moved to an old site.
 
@@ -74,8 +76,8 @@ The name Jameel Malik is also in the staff table. Recall that the same name (J. 
 # Risk Rating
 | Vulnerability | Location | Risk
 | :--- | :--- | :---
-| Weak PDF passwords crackable with a wordlist | 'patient_laboratory_report_1.pdf' | High |
-| Confidential Staff salaries and shareholders data exposed | 'old/mediroza_db_backup_2019.sql' | Critical
+| Weak PDF passwords crackable with a wordlist | ´patient_laboratory_report_1.pdf´ | High |
+| Confidential Staff salaries and shareholders data exposed | ´old/mediroza_db_backup_2019.sql´ | Critical
  
 
 

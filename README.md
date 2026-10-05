@@ -1,11 +1,8 @@
 # Penetration Testing project at Mediroza Hospital
 # Executive Summary
-A concise overview of the engagement, key findings and overall risk to the client.
+
 Penetration testing was carried out on Mediroza hospital to identify vulnerabilities, exploit them to demonstrate real impact, and document all findings.
-I performed reconnaissance on the web application - https://medirozahospital.com, using 'robots.txt' 
-
-
-
+This report covers my key findings, methodology, risk rating of each vulnerability, recommendations and also remediation.
 
 • Conduct reconnaissance on the target.
 • Identify exposed entry points.
@@ -15,7 +12,16 @@ I performed reconnaissance on the web application - https://medirozahospital.com
 
 
 # Scope and Methodology
-Target, tools used, approach taken and any limitations encountered.
+Target - https://medirozahospital.com.
+Tools used - Robots.txt, NS lookup, DNSrecon, WHOIS, Whatweb, Networkwalks Hash calculator, Networkwalks Password cracker, Command line (CMD)
+
+I performed reconnaissance on Meridoza hospital using WHOIS, Whatweb, DNSrecon, Ns lookup. I also carried out reconnaisance on https://medirozahospital.com, using robots.txt. 
+A robots.txt file tells web robots which pages or selections of a website they are allowed to visit.
+Disallow entries show hidden areas of the site that the owner does not want publicly indexed.
+
+# Username Enumeration
+I opened the staff login page and typed a username and password. The response was - Username not found. I then typed username as 'admin' and entered a password. The response was -incorrect password.
+The site gave two different messages. The second confirmed admin as a real account. This shows a vulnerability, a secure login should always show the same message, regardless of which field is wrong.
 
 
 # Findings and Proof of Exploitation

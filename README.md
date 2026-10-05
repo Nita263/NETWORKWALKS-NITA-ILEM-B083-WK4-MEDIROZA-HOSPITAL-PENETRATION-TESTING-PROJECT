@@ -1,5 +1,5 @@
 # Penetration Testing project at Mediroza Hospital
-# Executive Summary
+# Introduction
 
 Penetration testing was carried out on Mediroza hospital to identify vulnerabilities, exploit them to demonstrate real impact, and document all findings.
 
@@ -11,7 +11,6 @@ Target - https://medirozahospital.com.
 Tools used - Robots.txt, NS lookup, DNSrecon, WHOIS, Whatweb, Networkwalks Hash calculator, Networkwalks Password cracker, Command line (CMD), Exiftool.exe.
 
 I performed reconnaissance on Meridoza hospital using WHOIS, Whatweb, DNSrecon, Ns lookup. I also carried out reconnaisance on https://medirozahospital.com, using robots.txt. 
-
 A robots.txt file tells web robots which pages or selections of a website they are allowed to visit.
 Disallow entries show hidden areas of the site that the owner does not want publicly indexed.
 
@@ -69,10 +68,18 @@ I ran the exiftool command (exiftool patient_laboratory_report_1.pdf) to get met
 To get more information, I had to use the password option (exiftool -password your_password) to unlock other parts of the data.  I was able to uncover the name of the Author - J. Malik and other details and backup data that has been moved to an old site.
 
 Further reconnaissance exposed a directory listing which exposed Staff name, salaries and shareholders information. 
+
+<img width="1918" height="617" alt="Screenshot 2026-10-03 181200" src="https://github.com/user-attachments/assets/a76d3b9d-682b-4676-b017-cd63c2365785" />
+
+<img width="1920" height="968" alt="Staff salaries" src="https://github.com/user-attachments/assets/b8ebed4b-f86f-473c-ba8b-14fe57fa527b" />
+
+<img width="1810" height="963" alt="Shareholders table" src="https://github.com/user-attachments/assets/dcb34a83-c47e-461c-af27-1702d75684d3" />
+
 I copied this information to chatGPT to generate a readable table and also generate PDF copies of these tables.
 The name Jameel Malik is also in the staff table. Recall that the same name (J. Malik) moved the backup and left the note inside the file.
 
 # Risk Rating
+
 | Vulnerability | Location | Risk
 | :--- | :--- | :---
 | Weak PDF passwords crackable with a wordlist | `patient_laboratory_report_1.pdf` | High |

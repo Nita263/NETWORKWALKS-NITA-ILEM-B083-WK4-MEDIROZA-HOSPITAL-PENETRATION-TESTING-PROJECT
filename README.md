@@ -18,7 +18,6 @@ Disallow entries show hidden areas of the site that the owner does not want publ
 
 <img width="525" height="267" alt="Robots txt" src="https://github.com/user-attachments/assets/b9c9f08c-e02b-4796-a545-adba7df905b6" />
 
-
 # Findings and Proof of Exploitation
 
 Username Enumeration
@@ -73,18 +72,28 @@ Further reconnaissance exposed a directory listing which exposed Staff name, sal
 I copied this information to chatGPT to generate a readable table and also generate PDF copies of these tables.
 The name Jameel Malik is also in the staff table. Recall that the same name (J. Malik) moved the backup and left the note inside the file.
 
-
 # Risk Rating
 | Vulnerability | Location | Risk
 | :--- | :--- | :---
 | Weak PDF passwords crackable with a wordlist | `patient_laboratory_report_1.pdf` | High |
 | Confidential Staff salaries and shareholders data exposed | `old/mediroza_db_backup_2019.sql` | Critical |
 | Sensitive metadata left in patient PDF files | `patient_laboratory_report_3.pdf` | Medium |
-| Encrypted PDFs accessible after login bypass | `patient/laboratory/reports` | 
+| Encrypted PDFs accessible after login bypass | `patient/laboratory/reports` | High |
+| Username enumeration on login page | `patient/login.php` | Medium |
+| SQL injection login bypass | `patient/login.php` | Critical |
+| Forgotten backup folder with directory listing enabled | `old/` |
+
+# Recommendations and Remediation 
+
+1 SQL injection: Use prepared statements. Never build SQL queries using raw
+user input.
+2 Username enumeration: Show the same error message for a wrong username and a wrong password.
+Never reveal which one failed.
+3 PDF metadata: Make sure to strip all metadata from patient files before distributing. Use exiftool -all= filename.pdf to clean files.
+4 Use unique/strong passwords that are at least 12-16 characters long.
+5 Directory listing and backup exposure: Disable directory listing on all folders. Remove or relocate old backup files and never store database backups in a public web folder.
+
+
  
-
-
-
-
 # Recommendations and Remediation
 Actionable steps the client should take to fix each identified
